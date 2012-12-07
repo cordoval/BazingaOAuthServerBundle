@@ -14,7 +14,6 @@ class OAuthPlainTextSignature extends OAuthAbstractSignature
      */
     public function sign($baseString, $consumerSecret, $tokenSecret = '')
     {
-        //return base64_encode($this->urlencode($consumerSecret) . $this->urlencode('&') . $this->urlencode($tokenSecret));
         return base64_encode($this->urlencode($consumerSecret) . '&' . $this->urlencode($tokenSecret));
     }
 

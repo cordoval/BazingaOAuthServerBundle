@@ -11,11 +11,13 @@ abstract class OAuthAbstractSignature implements OAuthSignatureInterface
 {
     /**
      * Returns an encoded string according to the RFC3986.
+     * This is kept for compatibility
      *
-     * @return string
+     * @param $string
+     * @return string
      */
     public function urlencode($string)
     {
-        return str_replace('%7E', '~', rawurlencode($string));
+        return rawurlencode($string);
     }
 }
